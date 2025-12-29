@@ -3,6 +3,9 @@
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <title>AtmosQuery</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+
     </head>
         <body>
             {% block main %}{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+    <h1>AtmosQuery</h1>
+        <hr>
+            <form method="post" action="/">
+                <input class="search-bar" name="location" required autocorrect="off">
+                <button id="search" type="submit">search</button>
+            </form>
+
+{% endblock %}        

@@ -2,10 +2,19 @@
 
 {% block main %}
     <h1>AtmosQuery</h1>
-        <p>placeholder</p>
-        <hr>
+        <form method="post" action="/"">
+            <input class="search-bar" name="location" required autocorrect="off">
+            <button id="search" type="submit">search</button>
+        </form>
+        {% if data.current %}
         <div class="temp">
             <h2>temperature</h2>
+            <p>Current: {{ data.current.temp_f }}F</p>
+            <p>Feels-Like: {{ data.current.feelslike_f }}F</p>
         </div>
+        {% else %}
+            <p>error fetching data</p>
+        {% endif %}
+        
 
 {% endblock %}

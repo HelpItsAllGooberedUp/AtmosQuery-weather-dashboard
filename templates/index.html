@@ -2,10 +2,13 @@
 
 {% block main %}
     <h1>AtmosQuery</h1>
-        <form method="post" action="/"">
-            <input class="search-bar" name="location" required autocorrect="off">
-            <button id="search" type="submit">search</button>
-        </form>
+        <div class="right-container">
+            <form class="standard-search" method="post" action="/">
+                <input name="location" required autocorrect="off">
+                <button id="search" type="submit">search</button>
+            </form>
+        </div>
+        
         {% if data.current %}
         <div class="temp">
             <h2>temperature</h2>

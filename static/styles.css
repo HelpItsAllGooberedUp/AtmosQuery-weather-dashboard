@@ -1,0 +1,43 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+:root {
+  --bg-main: #1B1725;
+  --card-bg: #9DC7C8;
+  --accent-cool: #077187;
+  --accent-warm: #F6AE2D;
+  --accent-hot: #FF3A20;
+}
+
+body {
+    background-color: var(--bg-main);
+}
+
+.initial-search {
+    
+    justify-content: center;
+    align-items: center;
+
+}
+
+.standard_search {
+    
+    justify-content: right;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.button.search-button{
+    background-color: var(--card-bg);
+
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    margin-top: 20px;        /* optional spacing */
+}
+
+.right-container{
+    display: flex;
+}

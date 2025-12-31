@@ -2,13 +2,17 @@
 
 
 {% block main %}
+    <div class="parent-initial">
+        <h1>AtmosQuery</h1>
+        <div id="search-initial">
+            <form method="post" action="/">
+            <div class="search-bar-center">
+                <input class="search-bar" name="location" required autofocus autocorrect="off">
+            </div>
 
-    <h1>AtmosQuery</h1>
-        <hr>
-        <div class="center-container">
-            <form class="initial-search" method="post" action="/">
-                <input name="location" required autocorrect="off">
-                <button class="button" type="submit">search</button>
             </form>
         </div>
+
+           
+    </div>
 {% endblock %}

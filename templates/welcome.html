@@ -3,16 +3,13 @@
 
 {% block main %}
     <div class="parent-initial">
-        <h1>AtmosQuery</h1>
-        <div id="search-initial">
-            <form method="post" action="/">
-            <div class="search-bar-center">
-                <input class="search-bar" name="location" required autofocus autocorrect="off">
-            </div>
-
+        <h1 id="title-initial">AtmosQuery</h1>
+            <form class="form-initial" method="post" action="/">
+                <div class="search-initial">
+                    <input type="text" class="form-control" placeholder="eg. city, state">
+                    <button class="btn btn-outline-secondary" type="submit">Button</button>
+                </div>
             </form>
-        </div>
-
-           
+            <div id="spacer"></div>
     </div>
-{% endblock %}
+{% endblock %}a

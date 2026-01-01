@@ -1,25 +1,27 @@
 {% extends "layout.html" %}
 
 {% block main %}
-    <div class="main-parent">
+    <div class="top-bar">
+        <div></div>
+        <div>
         <h1 class="title">AtmosQuery</h1>
-            <div class="search-bar">
-                <form class="standard-search" method="post" action="/">
-                    <input name="location" required autocorrect="off">
-                    <button id="search" type="submit">search</button>
-                </form>
-            </div>
-        
+        </div>
+        <div class="search-bar">
+            <form class="standard-search" method="post" action="/">
+                <input name="location" required autocorrect="off">
+                <button class="btn btn-outline-secondary" id="search" type="submit">search</button>
+            </form>
+        </div>
+    </div>
         {% if data.current %}
         <div class="temp-display">
             <h2>temperature</h2>
             <p>Current: {{ data.current.temp_f }}F</p>
             <p>Feels-Like: {{ data.current.feelslike_f }}F</p>
-        </div>
         {% else %}
             <p>error fetching data</p>
         {% endif %}
-    </div>
+        </div>
         
 
 {% endblock %}

@@ -7,39 +7,99 @@
   --hot: #FF3A20;
 }
 
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#logo-text{
+    font-family: "Major Mono Display", monospace;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+}
+
 html, body {
     height: 100%;
     margin:0%;
 }
 
 body {
-    background-color: var(--main);
+
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(255,255,255,0.10),
+      transparent 55%
+    ),
+    linear-gradient(
+      to bottom,
+      #1e3c72,
+      #2a5298
+    );
 }
 
 
-.parent-initial{
+
+.title-init{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title-subscript{
+    justify-self: center;
+    text-align: center;
+    font-family: "Major Mono Display", monospace;
+    color:floralwhite;
+    white-space: nowrap;
+}
+
+.title-subscript{
+    display: flex;
+}
+
+.dashline{
+  width: 50%;          
+  border: none;        
+  border-top: 1px solid #ffffff; /* custom line */
+  margin: 1rem auto;  
+}
+
+.page-welcome{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    
-    
 }
+
 
 .search-initial{
-    width: 50%;
-    margin: auto;
     display: flex;
-    gap: 0.5rem;
-    
+    align-self: center;
+    width: 50%;
+    gap: 20px;
+    justify-content: center;
+
 }
 
-#title-initial{
-    margin-top: 20%;
-    text-align: center;
+.welcome-search
+{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    max-width: 100%;
+    justify-content: center;
 }
 
-.form-initial{
-    width: 100%;
+.welcome-search input{
+    width: 50%;
+}
+
+/* index.html */
+
+.top-bar{
+    display: flex;
 }

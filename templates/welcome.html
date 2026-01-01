@@ -2,14 +2,24 @@
 
 
 {% block main %}
-    <div class="parent-initial">
-        <h1 id="title-initial">AtmosQuery</h1>
-            <form class="form-initial" method="post" action="/">
-                <div class="search-initial">
-                    <input type="text" class="form-control" placeholder="eg. city, state">
-                    <button class="btn btn-outline-secondary" type="submit">Button</button>
-                </div>
+    <div class="page-welcome">
+
+        <div class="title-init">
+            <h1 id="logo-text" >AtmosQuery</h1>
+            <div class="title-subscript">
+                <hr class="dashline">
+                <p id="title-subscript">What's up there?</p>
+                <hr class="dashline">
+            </div>
+        </div>
+            
+        <div class="search-initial">
+            <form class="welcome-search" method="post" action="/">
+                    <input type="text" name="location" placeholder="eg. city, state">
+                    <button class="btn btn-primary" type="submit">Search</button>
             </form>
-            <div id="spacer"></div>
+        </div>
+          
+        <div class="bottom-"></div>
     </div>
-{% endblock %}a
+{% endblock %}

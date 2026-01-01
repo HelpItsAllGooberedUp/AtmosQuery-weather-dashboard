@@ -5,11 +5,15 @@
     <div class="page-welcome">
 
         <div class="title-init">
-            <h1 id="logo-text" >AtmosQuery</h1>
+            <div class="cloud-wrapper">
+                <img src="{{ url_for('static', filename='images/clearbackground-cloud.png') }}" alt="clouds" class="cloud cloud-left">
+                <h1 id="logo-text" >AtmosQuery</h1>
+                <img src="{{ url_for('static', filename='images/clearbackground-cloud.png') }}" alt="clouds" class="cloud cloud-right">
+            </div>
             <div class="title-subscript">
-                <hr class="dashline">
+                <hr class="dashline dashline-left">
                 <p id="title-subscript">What's up there?</p>
-                <hr class="dashline">
+                <hr class="dashline dashline-right">
             </div>
         </div>
             

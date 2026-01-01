@@ -30,7 +30,7 @@ body {
   background:
     radial-gradient(
       circle at 50% 25%,
-      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.20),
       transparent 55%
     ),
     linear-gradient(
@@ -40,7 +40,23 @@ body {
     );
 }
 
+.cloud-wrapper{
 
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 1rem;     
+    position: relative;
+
+}
+.cloud{
+    width: clamp(80px, 10vw, 120px); /* responsive cloud size */
+    height: auto;
+}
+
+.cloud-right{
+    transform: scaleX(-1);
+}
 
 .title-init{
     display: flex;
@@ -54,6 +70,9 @@ body {
     font-family: "Major Mono Display", monospace;
     color:floralwhite;
     white-space: nowrap;
+    margin-right: 20px;
+    margin-left: 20px;
+
 }
 
 .title-subscript{

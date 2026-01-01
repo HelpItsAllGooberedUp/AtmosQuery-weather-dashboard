@@ -18,6 +18,8 @@
     font-size: clamp(2.5rem, 8vw, 6rem);
 }
 
+
+
 html, body {
     height: 100%;
     margin:0%;
@@ -30,7 +32,7 @@ body {
   background:
     radial-gradient(
       circle at 50% 25%,
-      rgba(255,255,255,0.30),
+      rgba(255,255,255,0.50),
       transparent 55%
     ),
     linear-gradient(
@@ -159,7 +161,28 @@ body {
     width: 50%;
 }
 
-/* index.html */
+
+
+
+
+
+/* index.html
+
+keep main page style confined to this area */
+
+.main-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo-text-small{
+
+    font-family: "Major Mono Display", monospace;
+    font-size: clamp(1rem, 2vw, 3rem);
+
+}
 
 .top-bar{
     display: flex;

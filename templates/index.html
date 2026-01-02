@@ -20,9 +20,16 @@
     </div>
         {% if data.current %}
         <div class="info-card">
-            <p>{{ data.location.name }},&nbsp{{ data.location.region }}</p>
+
+            <div class="temperature">
             <p>Current: {{ data.current.temp_f }}F</p>
             <p>Feels-Like: {{ data.current.feelslike_f }}F</p>
+            </div>
+
+            <div class="location">
+            <p>{{ data.location.name }},&nbsp{{ data.location.region }}</p>
+            </div>
+            
         {% else %}
             <p>error fetching data</p>
         {% endif %}

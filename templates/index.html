@@ -3,18 +3,20 @@
 {% block main %}
 
 
-<div class="main-page"></div> 
+<div class="main-page">
     <div class="top-bar">
-        <div></div>
+        
         <div>
         <h1 id="logo-text-small" class="title">AtmosQuery</h1>
         </div>
+
         <div class="search-bar">
             <form class="standard-search" method="post" action="/">
                 <input name="location" required autocorrect="off">
                 <button class="btn btn-outline-secondary" id="search" type="submit">search</button>
             </form>
         </div>
+
     </div>
         {% if data.current %}
         <div class="temp-display">
@@ -25,6 +27,8 @@
             <p>error fetching data</p>
         {% endif %}
         </div>
+
+        <div id="footer-main"></div>
 </div>        
 
 {% endblock %}

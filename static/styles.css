@@ -171,10 +171,13 @@ body {
 keep main page style confined to this area */
 
 .main-page{
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-color:
 }
 
 #logo-text-small{
@@ -186,4 +189,7 @@ keep main page style confined to this area */
 
 .top-bar{
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
 }

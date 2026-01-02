@@ -22,8 +22,12 @@
         <div class="info-card">
 
             <div class="temperature">
-            <p>Current: {{ data.current.temp_f }}F</p>
-            <p>Feels-Like: {{ data.current.feelslike_f }}F</p>
+            <img class="condition-icon" src="https://{{ data.current.condition.icon }}">
+            <p>{{ data.current.temp_f }}F</p>
+            </div>
+
+            <div class="supplementary">
+                <p>Feels-Like: {{ data.current.feelslike_f }}F</p>
             </div>
 
             <div class="location">

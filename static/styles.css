@@ -255,3 +255,9 @@ keep main page style confined to this area */
     display: flex;
     gap: 2%;
 }
+
+.condition-icon{
+   width: 25%;
+    border: 2px solid white;
+}
+

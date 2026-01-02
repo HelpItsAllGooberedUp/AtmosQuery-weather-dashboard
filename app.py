@@ -27,4 +27,6 @@ def index():
         data = response.json()
         if data:
             print(data)
+
+            
         return render_template("index.html", data=data)

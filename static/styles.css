@@ -5,6 +5,9 @@
   --cool: #077187;
   --warm: #F6AE2D;
   --hot: #FF3A20;
+  --balticblue: #035E7B;
+  --evergreen: #002E2C;
+
 }
 
 .major-mono-display-regular {
@@ -174,10 +177,10 @@ keep main page style confined to this area */
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color:
+    background-color: #2a5298;
 }
 
 #logo-text-small{
@@ -188,8 +191,20 @@ keep main page style confined to this area */
 }
 
 .top-bar{
+    background-color: #1e3c72;
     display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: top;
+    padding-bottom: 20px;
+    padding-top: 2%;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+.temp-display{
+    color: aliceblue;
+    display: flex;
+    gap: 5px;
 }

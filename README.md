@@ -4,5 +4,6 @@ ____
 ## ABOUT
 
 Weather API functionality provided by www.WeatherAPI.com
+
 Icons Provided by [erikflowers-weather-icons](https://erikflowers.github.io/weather-icons/)
 ## How to set up on your device.

@@ -22,8 +22,10 @@
         <div class="info-card">
 
             <div class="temperature">
-            <img class="condition-icon" src="https://{{ data.current.condition.icon }}">
-            <p>{{ data.current.temp_f }}F</p>
+                <img class="condition-icon" src="{{ url_for('static', filename=iconpath) }}">
+                <div class="temp_numeric">
+                    <p>{{ data.current.temp_f }}F</p>
+                </div>
             </div>
 
             <div class="supplementary">

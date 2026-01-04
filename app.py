@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, jsonify
-import requests
+import requests, os
+from condition_icons import CODE_TO_ICON
 
 
 API_KEY = "2e1083a5c426416f88a231919252912"
@@ -20,13 +21,12 @@ def index():
         city = request.form.get("location")
         default = request.remote_addr or "New York City"
 
-
         response = requests.get(f"http://api.weatherapi.com/v1/current.json",
                      params={"key": API_KEY, "q": city or default}) 
-
+        
         data = response.json()
-        if data:
-            print(data)
+        weather_code = (data.get("current", {}).get("condition", {}).get("code", 0))
 
-            
-        return render_template("index.html", data=data)
+        iconpath = CODE_TO_ICON.get(weather_code, "images/icons/wi-na.svg")
+    
+        return render_template("index.html", data=data, iconpath=iconpath)

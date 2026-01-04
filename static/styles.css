@@ -171,7 +171,7 @@ body {
     display: flex;
     align-self: center;
     width: 50%;
-    gap: 20px;
+    height: 6%;
     justify-content: center;
 
 }
@@ -183,10 +183,12 @@ body {
     width: 100vw;
     max-width: 100%;
     justify-content: center;
+    gap: 2%;
 }
 
 .welcome-search input{
     width: 50%;
+    height: 100%;
 }
 
 
@@ -222,14 +224,20 @@ keep main page style confined to this area */
     width: 100%;
     flex-direction: row;
     justify-content:space-around;
-    align-items: top;
-    padding-bottom: 20px;
-    padding-top: 2%;
+    align-items: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
     border-bottom: 2px solid #ffffff;
     box-shadow: 0px 3px 0px #012120;
 }
 
+/* parent: top bar 
+TODO: make search main bar dynamic*/
 
+
+
+
+/* parent: main page */
 .info-card{
     color: aliceblue;
     height: 80vh;
@@ -275,5 +283,5 @@ keep main page style confined to this area */
 }
 
 .location{
-    
+
 }

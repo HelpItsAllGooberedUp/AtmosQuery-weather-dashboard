@@ -202,6 +202,7 @@ keep main page style confined to this area */
 
 .main-page{
     min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -213,7 +214,7 @@ keep main page style confined to this area */
 #logo-text-small{
 
     font-family: "Major Mono Display", monospace;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(15px, 1.5vw, 60px);
 
 }
 
@@ -231,16 +232,28 @@ keep main page style confined to this area */
     box-shadow: 0px 3px 0px #012120;
 }
 
-/* parent: top bar 
-TODO: make search main bar dynamic*/
+/* parent: top bar */
 
+.standard-search{
+     display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    width: 100%;
+}
 
+.standard-search input {
+    width: clamp(220px, 40vw, 480px);
+    height: 2.50rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
 
 
 /* parent: main page */
 .info-card{
     color: aliceblue;
-    height: 80vh;
+    height: 100vh;
     width: 75%;
     margin-top: 5%;
     gap: 5px;
@@ -248,8 +261,8 @@ TODO: make search main bar dynamic*/
     border: 2px solid #ffffff;
     border-radius: 15px;
     box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.22),
-    0 6px 12px rgba(0, 0, 0, 0.15);
+    0 12px 30px rgba(0, 0, 0, 0.50),
+    0 6px 12px rgba(0, 0, 0, 0.50);
 
     display: flex;
     flex-direction: column;
@@ -257,31 +270,93 @@ TODO: make search main bar dynamic*/
     font-family: "Space Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    
 }
 /* parent: info-card */
+
+
+.location{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin-top: 2%;
+
+}
+
+
 .temperature{
     display: flex;
-    gap: 2%;
-    justify-content: space-around;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
     margin-top: 2%;
 }
 /* parent : temperature*/
 .condition-icon{
-   width: 25%;
-    border-radius: 8px;
-    border: 2px solid white
+   width: 20%;
 }
 
 .temp_numeric{
-    font-size: larger;
+    margin: top;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    text-shadow: 5px 3px 3px black;
 }
 
 /* parent: info-card */
 
+.supp-parent{
+    width: 75%;
+    height: 60vh;
+    justify-self: center;
+    margin-left: 12.5%;
+    margin-top:2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 2vw;
+}
+
 .supplementary{
+    display: flex;
+    justify-content: space-around;
+    text-shadow: 5px 3px 3px black;
+}
+/*parent is supp-parent*/
+.most-info {
+    margin-top: 2%;
+    width: 100%;
+    height: 75%;
+    background-color: #2a243a;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.50),
+        0 6px 12px rgba(0, 0, 0, 0.50);
+    justify-content: space-around;
 
 }
-
-.location{
-
+.supp-row-top{
+    display: flex;
+    justify-content: space-around;
 }
+
+
+.wind_info{
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1.5rem, 2vw, 2rem)
+}
+
+.precip{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: clamp(1.5rem, 2vw, 2rem)
+}
+

@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, redirect, jsonify
 import requests, os
 from condition_icons import CODE_TO_ICON
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-API_KEY = "2e1083a5c426416f88a231919252912"
+API_KEY = os.getenv("API_KEY")
 
 
 app = Flask(__name__)

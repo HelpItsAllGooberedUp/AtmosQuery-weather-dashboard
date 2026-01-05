@@ -51,6 +51,7 @@
 
 html, body {
     margin:0%;
+    font-size: clamp(14px, 1.1vw, 18px);
 }
 
 body {
@@ -316,6 +317,7 @@ keep main page style confined to this area */
     flex-direction: column;
     flex-wrap: nowrap;
     font-size: 2vw;
+    
 }
 
 .supplementary{
@@ -336,27 +338,36 @@ keep main page style confined to this area */
         0 6px 12px rgba(0, 0, 0, 0.50);
     justify-content: space-around;
 
+     font-size: 1vw;
+     line-height: 1.5;
+     align-items: center; 
 }
+
 .supp-row-top{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 
+.wind_info,
+.precip {
+    margin: 5%;
+}
+
 .wind_info{
-    margin-top: 5%;
-    margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: clamp(1.5rem, 2vw, 2rem)
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .precip{
-    margin-top: 5%;
+    padding-top:5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: clamp(1.5rem, 2vw, 2rem)
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    text-wrap: no-wrap;
 }
 

@@ -27,9 +27,15 @@ def index():
         response = requests.get(f"http://api.weatherapi.com/v1/current.json",
                      params={"key": API_KEY, "q": city or default}) 
         
+        forcast = requests.get(f"http://api.weatherapi.com/v1/forecast.json",
+                     params={"key": API_KEY, "q": city or default}) 
+        
         data = response.json()
+        forcast = forcast.json()
+        print(forcast)
+
         weather_code = (data.get("current", {}).get("condition", {}).get("code", 0))
 
         iconpath = CODE_TO_ICON.get(weather_code, "images/icons/wi-na.svg")
     
-        return render_template("index.html", data=data, iconpath=iconpath)
+        return render_template("index.html", data=data, forcast=forcast, iconpath=iconpath)

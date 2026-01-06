@@ -6,23 +6,24 @@ No ads, no videos autoplaying at max volume (The Weather Channel - My Nemesis. >
 _____
 
 # Features
-	•	Current Weather Overview: Quickly see the current temperature, weather condition, and a visual icon representing the conditions.
-	•	Multi-Day Forecast: Access upcoming weather predictions including high and low temperatures, conditions, and chance of precipitation.
-	•	Supplementary Weather Data: Detailed metrics such as wind speed and direction, feels-like temperatures, humidity, rainfall in inches, and cloud coverage.
-	•	Dynamic Weather Icons: Weather icons automatically update according to current conditions.
-	•	Search Flexibility: Lookup cities by name, zip code (US), or city/state/country combinations. Searches are case and spelling insensitive.
+•	Current Weather Overview: Quickly see the current temperature, weather condition, and a visual icon representing the conditions.
+•	Multi-Day Forecast: Access upcoming weather predictions including high and low temperatures, conditions, and chance of precipitation.
+•	Supplementary Weather Data: Detailed metrics such as wind speed and direction, feels-like temperatures, humidity, rainfall in inches, and cloud coverage.
+•	Dynamic Weather Icons: Weather icons automatically update according to current conditions.
+•	Search Flexibility: Lookup cities by name, zip code (US), or city/state/country combinations. Searches are case and spelling insensitive.
 
 
 # Roadmap
-Here are some features planned for future releases
- -[] Weather map images to view broader conditions.
- -[] Moon phases 
- -[] Dynamic icons that vary depending on time of day
- -[] Hourly weather predictions.
- -[] Optionally save user location
- -[] Enhanced mobile layout for smaller screens
- -[] Interactive charts with chart.js
- -[] Historical weather graph
+Here are some features planned for future releases:
+
+- [ ] Weather map images to view broader conditions
+- [ ] Moon phases
+- [ ] Dynamic icons that vary depending on time of day
+- [ ] Hourly weather predictions
+- [ ] Optionally save user location
+- [ ] Enhanced mobile layout for smaller screens
+- [ ] Interactive charts with chart.js
+- [ ] Historical weather graph
 ____
 ## ABOUT
 
@@ -93,15 +94,14 @@ Then visit `http://<your-local-ip>:5000/` on another device on the same network.
 
 # Usage
 ____
-
-	1.	Enter a city name, zip code, or city/state/country combination in the search bar.
-	2.	Press Enter or click the search button.
-	3.	View the current weather and forecast for the requested location.
+1.	Enter a city name, zip code, or city/state/country combination in the search bar.
+2.	Press Enter or click the search button.
+3.	View the current weather and forecast for the requested location.
 
 Supported formats include:
-	•	City, State (e.g., Boston, MA)
-	•	Zip Code (US only)
-	•	City, Province/State, Country (e.g., Toronto, Ontario, Canada)
+•	City, State (e.g., Boston, MA)
+•	Zip Code (US only)
+•	City, Province/State, Country (e.g., Toronto, Ontario, Canada)
 
 Searches are forgiving — case and spacing do not affect results
 (this is especially important for when I dont remember how to spell Massachusetts ;) )
@@ -122,11 +122,11 @@ I used this when creating "condition_icons.py" but it can be referenced if ever 
 # Contributing
 ________
 Contributions are welcome! To contribute:
-	1.	Fork the repository.
-	2.	Create a new branch: git checkout -b feature-name.
-	3.	Make changes and commit: git commit -am "Add feature".
-	4.	Push to branch: git push origin feature-name.
-	5.	Submit a pull request.
+1.	Fork the repository.
+2.	Create a new branch: git checkout -b feature-name.
+3.	Make changes and commit: git commit -am "Add feature".
+4.	Push to branch: git push origin feature-name.
+5.	Submit a pull request.
 
 
 # Final Info

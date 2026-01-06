@@ -138,7 +138,7 @@ If you are here because you are a fellow CS50 student, and you want someone to w
 if you dont want to self host this (I wouldnt want to either)
 
 
-visit it here: 
+visit it here: https://atmosquery.onrender.com
 
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Enjoy! 
 ______

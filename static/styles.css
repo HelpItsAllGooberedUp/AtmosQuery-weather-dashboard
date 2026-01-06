@@ -1,3 +1,4 @@
+/* if you are trying to adjust this mess I am sorry */
 
 :root {
   --main: #1B1725;
@@ -254,7 +255,6 @@ keep main page style confined to this area */
 /* parent: main page */
 .info-card{
     color: aliceblue;
-    height: auto;
     width: 75%;
     margin-top: 5%;
     gap: 5px;
@@ -267,6 +267,9 @@ keep main page style confined to this area */
 
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: auto;
 
     font-family: "Space Mono", monospace;
     font-weight: 400;
@@ -309,7 +312,7 @@ keep main page style confined to this area */
 
 .supp-parent{
     width: 75%;
-    height: 60vh;
+    height: auto;
     justify-self: center;
     margin-left: 12.5%;
     margin-top:2%;
@@ -329,56 +332,81 @@ keep main page style confined to this area */
 .most-info {
     margin-top: 2%;
     width: 100%;
-    height: auto%;
+    height: auto;
     background-color: #2a243a;
     flex-direction: column;
     border-radius: 20px;
     box-shadow: 
         0 12px 30px rgba(0, 0, 0, 0.50),
         0 6px 12px rgba(0, 0, 0, 0.50);
-    justify-content: space-around;
-
-     font-size: 1vw;
-     line-height: 1.5;
-     align-items: center; 
-}
+    justify-content: flex-start;
+    align-items: stretch;
+    font-size: clamp(1rem, 1.2vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: 10%;
+} 
 
 .supp-row-top{
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-around;
-    align-items: center;
+    gap: 1rem;
 }
-
 
 .wind_info,
 .precip {
+    display: block;  
     margin: 5%;
+    padding: 5%;
 }
 
-.wind_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: clamp(1.5rem, 2vw, 2rem);
-}
-
-.precip{
-    padding-top:5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    text-wrap: no-wrap;
-}
 
 /* parent is most-info */
-.forecast{
-    width: 75%;
-    height: auto;
-    justify-content: center;
+.forecast-table {
+    font-family: "Space Mono", monospace; 
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    line-height: 2; 
+    border-collapse: separate;
+    border-spacing: 0 0.5rem; 
+    width: 100%;
+    min-width: 500px;
 }
 
-.table{
-    background-color: #002E2C;
-    border-radius: 20px;
+
+.forecast-table th,
+.forecast-table td {
+    padding: 0.75rem 1.25rem; 
+}
+
+/* this is to space out the high and low temps a bit more */
+.forecast-table th:nth-child(3),
+.forecast-table td:nth-child(3), 
+.forecast-table th:nth-child(4),
+.forecast-table td:nth-child(4) 
+{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem; 
+}
+
+.forecast-table th {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.forecast-table td {
+    color: aliceblue;
+}
+
+.forecast-wrapper {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+.split-tables{
+   font-size: clamp(1.5rem, 2vw, 2rem); 
+   display: flex;
+   justify-content: center;
+   gap: 2%;
+
 }

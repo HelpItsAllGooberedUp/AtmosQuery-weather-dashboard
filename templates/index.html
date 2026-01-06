@@ -49,54 +49,87 @@
                 <div class="most-info">
                     <div class="supp-row-top">
                         <div class="wind_info">
-                            <p>Wind:</p>
-                            <p>Speed: {{ data.current.wind_mph }}mph {{ data.current.wind_dir }}</p>
-                            <p> Gust: {{ data.current.gust_mph }}mph</p>
+                            <table class="wind_data">
+                                <thead>
+                                    <tr>
+                                        <th>Wind Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Speed: {{ data.current.wind_mph }}mph</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Direction: {{ data.current.wind_dir }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td> Gust: {{ data.current.gust_mph }}mph</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
                         </div>
                         <div class="precip">
-                            <p>Cloud Coverage: {{ data.current.cloud }}%</p>
-                            <p>Humidity: {{ data.current.humidity }}</p>
-                            <p>UV Index: {{ data.current.uv }}</p>
-                            <p>Rainfall: {{ data.current.precip_in }}"</p>
+                            <table class="precipitation_table">
+                                <thead>
+                                    <tr>
+                                        <th>Precipitation:</th>
+                                    </tr>
+                                    
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>Rainfall: {{ data.current.precip_in }}"</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Cloud Coverage: {{ data.current.cloud }}%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Humidity: {{ data.current.humidity }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <div class="forecast">
-                        <table class="table">
-                             <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                </tr>
-                                 <tr>
-                                    <th scope="row">3</th>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>@social</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="split-tables">
+                        <p>Daily Forcast</p>
                     </div>
+
+                    <div class="forcast">
+                        <div class="forecast-wrapper">
+                            <table class="forecast-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Condition</th>
+                                        <th>High</th>
+                                        <th>Low</th>
+                                        <th>Rain</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for day in forecast.forecastday %}
+                                        <tr>
+                                            <td class="px-3">{{ day.date }}</td>
+                                            <td class="px-3">{{ day.day.condition.text }}</td>
+                                            <td class="px-3">{{ day.day.maxtemp_f }}°F</td>
+                                            <td class="px-3">{{ day.day.mintemp_f }}°F</td>
+                                            <td class="px-3">{{ day.day.daily_chance_of_rain }}%</td>
+                                        </tr>
+                                    {% endfor %}
+                            </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
-            <!--adjusted height of forcast, most info and info card 
-            but dont have signal to test it on the site yet-->
         {% else %}
             <p>error fetching data</p>
         {% endif %}
